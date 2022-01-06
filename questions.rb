@@ -1,20 +1,13 @@
 class Question
-
+  attr_accessor :correct_answer
   def initialize
-    @first_number = rand(100)
-    @second_number = rand(100) 
+    @first_number = rand(10)
+    @second_number = rand(10) 
   end
 
-  def ask_player(Player)
-    print "#{player.name}: What does #{@first_number} + #{@second_number} equal?"
+  def ask_player(player)
+    print "#{player}: What does #{@first_number} + #{@second_number} equal? "
 
-    correct_answer = (get.chomp.to_i == @first_number + @second_number)
-    
-    if correct_answer
-      puts "YES! You are correct.\n\n"
-    else
-      puts "Seriously? No!\n\n"
-    end
-    return correct_answer
+    @correct_answer = (@first_number + @second_number)
   end
 end

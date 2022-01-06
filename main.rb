@@ -1,4 +1,5 @@
-require './players'
-require './questions'
-require './turns'
-require '.game'
+require './game.rb'
+
+new_game = Game.new
+
+new_game.start_game

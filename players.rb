@@ -1,13 +1,13 @@
 class Player
 
-  attr_accessor :name, :lives,:score
-  def initialize(name, lives)
+  attr_accessor :name, :lives, :answer
+  def initialize(name)
     @name = name
-    @lives = lives
-    @score = 0
+    @lives = 3
+    @answer = ""
   end
 
-  def is_dead?
-    return self.lives <= 0
+  def lose_life
+    @lives -= 1
   end
 end
